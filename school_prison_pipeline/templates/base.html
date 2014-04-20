@@ -10,14 +10,12 @@
 	<title>{% block title %}School Discipline{% endblock %}</title>
 	<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
 	<link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet">
-	<link href="{{ STATIC_URL }}css/app.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	{% block head_info %}{% endblock %}
 </head>
 
 <body>
-	<div class="header">
-		<div id="site-title"><a class="home-link" href="{% url 'map_home' %}">School Discipline</a></div>
-	</div>
+	
 	<div class="container">
 		{% block content %}{% endblock %}
 	</div>
@@ -25,6 +23,8 @@
 	<script src="{{ STATIC_URL }}js/jquery-1.10.1.min.js"></script>
 	<script src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
 	<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-	<script src="{{ STATIC_URL }}js/app.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	{% block javascript %}{% endblock %}
 </body>
 </html>
