@@ -483,10 +483,9 @@ $( document ).ready(function() {
 	if ($(window).width() > 700) {
 		window.location.href = "http://school-discipline.herokuapp.com";
 	}
-	$(".preloader").hide();
 
 	loadCompareGraphs();   //for compare tab, see below
-
+	console.log($("#expenses-p-0").html());
 	$(window).scroll(function () { 
 
 
