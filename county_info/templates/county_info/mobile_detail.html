@@ -15,7 +15,7 @@
 		<ul id="profile-list">
 			<li>
 				<div class="left">Total expenses per student:</div>
-				<div class="middle" id-"expenses">${{ demographics.expenses_per_pupil|floatformat:0 }}</div>
+				<div class="middle" id="expenses">${{ demographics.expenses_per_pupil|floatformat:0 }}</div>
 			</li>
 			<li>
 				<div class="left">Percent who take the SAT:</div>
@@ -86,11 +86,13 @@ $( document ).ready(function() {
 	if ($(window).width() > 700) {
 			window.location.href = "http://school-discipline.herokuapp.com";
 	}
+	
+	loadDistrictPie();        //see below
+	loadDisciplineProfile();  //see below
+
 	var expenses = $("#expenses").html();
 	var length = expenses.length;
 	expenses = expenses.substr(0,length-4)+","+expenses.substr(length-4, length-1),
-	loadDistrictPie();        //see below
-	loadDisciplineProfile();  //see below
 });
 $( window ).resize(function() {
   if ($(window).width() > 700) {
