@@ -381,10 +381,14 @@ img {
 #district-discipline .bar-wrap {
     color:#626262;
     width:100%;
+    height:50px;
 
 }
 #district-discipline .bar-wrap p {
    float:left;
+   padding:0 10px;
+   margin:13px 0 0 0 !important;
+   font-size:16px;
 
 }
 #district-discipline h4 {
