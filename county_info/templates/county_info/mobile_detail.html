@@ -309,7 +309,17 @@ function loadDisciplineProfile () {
 
 
 			// set width of bar based on value
-			var width = Math.round((sortable[i][1]/(total/1.5))*100);
+			var width;
+			if (sortable[i][1] == 0) {
+				width= .5;
+			}
+			else if (sortable[i][1] < 15) {
+				width= 2.5;
+			}
+			else {
+				width = (sortable[i][1]/(total/1.5))*100;
+			}
+			
 			if (width > 40) {
 				$("#d-"+i).html(sortable[i][0] +": "+sortable[i][1] + " +/- 2");
 				width = width +"%";
