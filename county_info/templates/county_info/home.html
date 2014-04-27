@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% load humanize %}
+
 {% block head_info %}
 	<link href="{{ STATIC_URL }}css/app.css" rel="stylesheet">
+	<script>
+		if (window.innerWidth <= 700) {
+			window.location.href = "http://school-discipline.herokuapp.com/mobile";
+		}
+	</script>
 {% endblock %}
 {% block content %}
 <div id="map"class="row">
@@ -1165,9 +1171,6 @@
 
 $( document ).ready(function() {
 	//adapt for mobile view
-	if ($(window).width() <= 700) {
-		window.location.href = "http://school-discipline.herokuapp.com/mobile";
-	}
 
 	$(".preloader").hide();
 	$(".preloader-c").hide();
