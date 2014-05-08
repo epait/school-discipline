@@ -59,6 +59,8 @@ MIDDLEWARE_CLASSES = (
     'corsheaders.middleware.CorsMiddleware',
 )
 
+X_FRAME_OPTIONS = 'ALLOW-FROM http://faultlinesnc.com/'
+
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
     'faultlinesnc.com',
